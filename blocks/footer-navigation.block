@@ -1,0 +1,31 @@
+
+<div id="footer">
+    <squarespace:block-field id="footerImg" columns="1" /> <br>
+    <div id="footer-content" class="tan-bg inset-box-shadow">
+        <p class="centered" style="text-align: center; padding: 0 2rem;">Please join us in supporting these groups who protect and improve Colorado and the outdoors!</p>
+
+        <div id="sponsors" class="centered basic-padding">
+            <a href="https://continentaldividetrail.org/donate/" target="_blank"><img class="icon2" src="../assets/cdt.png" alt="Continental Divide Trail foundation logo"/></a>
+            <a href="https://coloradotrail.org/donate-colorado-trail-foundation/" target="_blank"><img class="icon2" src="../assets/ct.png" alt="Colorado Trail foundation logo"/></a>
+            <a href="https://www.friendsoftwinlakes.com/" target="_blank"><img class="icon" src="../assets/fot.png" alt="Friends of Twin Lakes foundation logo"/></a>
+            <a href="http://cloudcitywheelers.com/donate" target="_blank"><img class="icon2" src="../assets/cloudcity.png" alt="Cloud City Wheelers logo"/></a>
+            <a href="https://www.independencepass.org/donate" target="_blank"><img class="icon" src="../assets/indy-pass.png" alt="Independence Pass Foundation logo"/></a>
+        </div>
+
+        <span id="copyright" class="basic-padding">
+            <p style="font-weight: 500;">Copyright Twin Lakes General Store &copy; 2022</p>
+            <p><a style="font-size: 12px;" target="_blank" href="https://brianwlackey.com/">Header Photo by Brian Lackey Photography</a></p>
+            <p><a style="font-size: 14px; href="https://designelixir.studio" target="_blank">Made with &hearts; by Design Elixir</a></p>
+        </span>
+        <squarespace:block-field id="footerSocial" columns="1" />
+
+    </div>
+
+    <nav id="footer-navigation" class="centered" style="background: #961b1e;">
+        {.repeated section items}
+            {.section externalLink}<a href="{url}">{title}</a>{.end}
+        {.end}
+    </nav>
+
+</div>
+

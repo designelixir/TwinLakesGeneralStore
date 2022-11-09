@@ -1,37 +1,69 @@
+
 <!doctype html>
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-    <!-- include system scripts, page meta, and header code injection -->
+    <link rel="stylesheet" href="https://use.typekit.net/ugb4fcd.css">
     {squarespace-headers}
+    
   </head>
+  <div class="site-wrapper">
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+  <!-- Messenger Chat plugin Code -->
+   
 
     <div class="site-container">
+     <div id="fb-root"></div>
 
-      <header class="site-header">
-        <!-- site navigation -->
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "447344335356856");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+      <header class="site-header centered inset-box-shadow">
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
-
-        <!-- site title or logo -->
-        {.section website}
-          <h1 class="site-title-heading" data-content-field="site-title">
-            <a href="/" class="site-title-link">{siteTitle}</a>
-          </h1>
-        {.end}
       </header>
 
+      
+
+    
+        <script>console.log({@|json-pretty})</script>
+
+
       <!-- cms content injection point -->
-      <main class="content-container" role="main" data-content-field="main-content">
+      <main class="content-container basic-padding" role="main" data-content-field="main-content">
+        <div class="centered" id="header-image"><img class="page-illustration" src="{collection.mainImage.assetUrl}"/></div>
+
+
+
        {squarespace.main-content}
       </main>
 
-      <!--Footer with open block field -->
-      <footer class="site-footer">
-        <squarespace:block-field id="footerBlocks" columns="12" />
-      </footer>
+      
 
     </div>
 
@@ -40,6 +72,12 @@
 
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
+  <footer class="site-footer">  
+        <squarespace:navigation navigationId="footerNav" template="footer-navigation" />
+  </footer>
 
   </body>
+
+  </div>
 </html>
+

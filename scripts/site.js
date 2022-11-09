@@ -1,10 +1,11 @@
+function toggle(togglestatus, container){
+  var target = document.getElementById(container);
 
-/**
- * This script wrapped in a Immediately-Invoked Function Expression (IIFE) to
- * prevent variables from leaking onto the global scope. For more information
- * on IIFE visit the link below.
- * @see http://en.wikipedia.org/wiki/Immediately-invoked_function_expression
- */
+  if (togglestatus){
+    $(target).css('display','block');
+  } else {$(target).css('display','none')}
+   
+}
 
 (function() {
   'use strict';

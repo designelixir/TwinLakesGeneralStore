@@ -1,23 +1,41 @@
-<nav class="site-navigation">
-  <ul class="site-navigation-list">
-    {.repeated section items}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<div id="site-navigation-wrapper">
+   <div class="site-mobile-navigation tan-bg fade-in inset-box-shadow" id="mobile-nav" style="display: none;">
+    <span class="centered" style="background: #961b1e; padding: 2rem;"><a href="/"><img class="dropshadow" style="height: 100px;" src="{website.logoImageUrl}" alt="Twin Lakes General Store and Mercantile Logo"/></a></span>
 
-      <li class="site-navigation-item {.section active} active-link{.end}">
+    <nav class="centered">
+        <ul class="site-mobile-navigation-list">
+          {.repeated section items}
+            <li class="site-mobile-navigation-item {.section active} active-link{.end}">
+              {.section collection}<a href="{fullUrl}">{navigationTitle}</a>{.end}
+            </li>
+          {.end}
+        </ul>
+      </nav>
+      <span id="mobile-close" class="centered mobile-navigation-button" onclick="toggle(false, 'mobile-nav')"><img style="height: 75px; margin-top: 100px;" src="assets/close.svg"/> </span>
+  </div>
+  
+  <div id="contact-nav" class="fade-in" style="width: 100%; height: 75px;">
+    <a class="dropshadow hoverscale" href='tel:7194862196'>(719) 486-2196 </a>
+    <a class="desktop-hide dropshadow hoverscale" href='https://g.page/TwinLakesGeneralStore?share' target="_blank">6451 E State Highway 82, Twin Lakes, CO, 81251</a>
+    <a class="mobile-hide dropshadow" href='https://g.page/TwinLakesGeneralStore?share' target="_blank">6451 E State Highway 82</a>
+  </div>
 
-        <!-- collection link -->
-        {.section collection}
-          <a href="{fullUrl}">{navigationTitle}</a>
-        {.end}
+  <div id="site-logo-container" class="centered fade-in hoverscale" >
+    <a href="/"><img style="height: 200px; filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .25));" src="{website.logoImageUrl}" alt="Twin Lakes General Store and Mercantile Logo"/></a>
+  </div>
 
-        <!-- external link -->
-        {.section externalLink}
-          <a href="{url}"{.section newWindow} target="_blank"{.end}>
-            {title}
-          </a>
-        {.end}
+  <nav class="site-navigation centered">
+    <ul class="site-navigation-list desktop-hide">
+      {.repeated section items}
+        <li class="site-navigation-item {.section active} active-link{.end}">
+          {.section collection}<a class="tan-bg" href="{fullUrl}">{navigationTitle}</a>{.end}
+        </li>
+      {.end}
+    </ul>    
+    <span id="mobile-open" class="mobile-hide" onclick="toggle(true, 'mobile-nav')"><img style="height: 75px; margin-top: 25px;" src="../assets/menu.svg"/> </span>
 
-      </li>
+  </nav>
 
-    {.end}
-  </ul>
-</nav>
+</div>
+
