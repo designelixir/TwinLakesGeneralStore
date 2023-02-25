@@ -44,7 +44,8 @@
 
     <section id="intro-sec">
         <div class="centered" id="header-image"><img class="page-illustration" src="{collection.mainImage.assetUrl}"/></div>
-        <h1>{pageTitle}</h1>
+        <h1>{title}</h1>
+        <p>{description}</p>
        
     </section>
 
