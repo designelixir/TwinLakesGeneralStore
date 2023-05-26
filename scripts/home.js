@@ -44,7 +44,7 @@ $(window).on("resize", function() {
   
   var winterImgUrl = "assets/motu-winter.png";
   var springImgUrl = "assets/motu-spring.png";
-  var earlySummerImgUrl = "assets/motu-summer2.png";
+  var earlySummerImgUrl = "assets/storefront.png";
   var lateSummerUrl = "assets/motu-summer.png";
   
   $(function() {
